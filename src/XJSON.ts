@@ -16,8 +16,8 @@ export type JSONObject = { [key: string]: JSON };
 
 export type XJSON = XJSON.Primitive | XJSON.Object | XJSON.Array | undefined;
 
-export type ToXJSON<T> = (item: T) => JSON;
-export type FromXJSON<T> = (json: JSON) => T;
+export type ToXJSON<T> = (item: T) => XJSON;
+export type FromXJSON<T> = (json: XJSON) => T;
 
 export namespace XJSON {
 
