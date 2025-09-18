@@ -1,0 +1,55 @@
+{
+  "name": "@uboness/[NAME]",
+  "version": "0.0.1",
+  "author": "uboness",
+  "publishConfig": {
+    "@uboness:registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uboness/[NAME].git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "description": "[DESCRIPTION]",
+  "engines": {
+    "node": ">=18.18"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "main": "dist/cjs/index.js",
+  "bin": "./bin/explorer.js",
+  "files": [
+    "tsconfig.json",
+    "tsconfig.cjs.json",
+    "tsconfig.esm.json",
+    "tsconfig.types.json",
+    "README.md",
+    "CHANGELOG.md",
+    "src",
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist & del ./src/**/*.js",
+    "build:peg": "peggy --format es [PATH-TO-PEG_FILE]",
+    "build:compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
+    "build:preparePackageJsons": "node ./scripts/preparePackageJsons.js",
+    "build": "pnpm run build:peg && pnpm run build:compile && pnpm run build:preparePackageJsons",
+    "test": "jest",
+    "cbuild": "pnpm run clean && pnpm run build",
+    "watch": "tsc -w -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
+    "release:bump": "commit-and-tag-version",
+    "release:postbump": "pnpm run release:push && pnpm run release:publish",
+    "release:push": "git push --follow-tags",
+    "release:publish": "npm publish",
+    "release": "pnpm run release:bump && pnpm run release:push && pnpm run release:publish"
+  }
+}
