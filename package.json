@@ -44,8 +44,7 @@
     "release:postbump": "pnpm run release:push && pnpm run release:publish",
     "release:push": "git push --follow-tags",
     "release:publish": "pnpm run release:publish:npm && pnpm run release:publish:gh",
-    "release:publish:npm": "npm publish --registry=https://registry.npmjs.org",
-    "release:publish:gh": "npm publish --registry=https://npm.pkg.github.com"
+    "release:publish:npm": "npm publish --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
