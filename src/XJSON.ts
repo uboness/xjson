@@ -149,7 +149,7 @@ export namespace XJSON {
     };
 
     export const isJSONPrimitive = (value: any): value is JSONPrimitive => value === null || isString(value) || isBoolean(value) || isNumber(value);
-    const isPrimitive = (value: any): value is Primitive => isJSONPrimitive(value) || Registry.isValue(value);
+    export const isPrimitive = (value: any): value is Primitive => isJSONPrimitive(value) || Registry.isValue(value);
     const isObject = (value: any): value is Object => isJSObject(value) && !isPrimitive(value);
 
 }
