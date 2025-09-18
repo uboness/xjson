@@ -24,8 +24,6 @@
       "default": "./dist/esm/index.js"
     }
   },
-  "main": "dist/cjs/index.js",
-  "bin": "./bin/explorer.js",
   "files": [
     "tsconfig.json",
     "tsconfig.cjs.json",
@@ -34,7 +32,6 @@
     "README.md",
     "CHANGELOG.md",
     "src",
-    "bin",
     "dist"
   ],
   "scripts": {
