@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/uboness/xjson/compare/v0.0.5...v0.0.6) (2025-09-18)
+
+
+### Bug Fixes
+
+* `ToXJSON` and `FromXJSON` types where wrongly types ([750e70c](https://github.com/uboness/xjson/commit/750e70cd1ce8898c78ea73c51897281835dbfacc))
+
 ## [0.0.5](https://github.com/uboness/xjson/compare/v0.0.4...v0.0.5) (2025-09-18)
 
 ## [0.0.4](https://github.com/uboness/xjson/compare/v0.0.3...v0.0.4) (2025-09-18)
