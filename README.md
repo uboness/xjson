@@ -1,27 +1,10 @@
-# @uboness/[NAME]
+# @uboness/xjson
 
-[DESCRIPTION] 
+Extended JSON with addition data types
 
 ## Initialize this repo
 
 add the following packages:
-
-1. Change this README with the new names and descriptions of the library.
-
-2. Run the following commands to add all the dev libs 
-```bash
-pn add -D typescript @types/node jest @types/jest ts-jest rimraf del-cli commit-and-tag-version
-```
-When using `.peg` files, also add the `peggy` lib:
-
-```bash
-pn add peggy -D
-```
-(If you don't use `peg` files, make sure to update `package.json` by removing the `build:peg` script and its references)
-
-## Dev
-
-This project will be published with both commonjs and esm codebases
 
 ### Bulid Commands
 

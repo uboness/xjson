@@ -1,5 +1,5 @@
 {
-  "name": "@uboness/[NAME]",
+  "name": "@uboness/xjson",
   "version": "0.0.1",
   "author": "uboness",
   "publishConfig": {
@@ -7,11 +7,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/uboness/[NAME].git"
+    "url": "git://github.com/uboness/xjson.git"
   },
   "keywords": [],
   "license": "MIT",
-  "description": "[DESCRIPTION]",
+  "description": "Extended json with additional \"primitive\" values",
   "engines": {
     "node": ">=18.18"
   },
@@ -39,10 +39,9 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist & del ./src/**/*.js",
-    "build:peg": "peggy --format es [PATH-TO-PEG_FILE]",
     "build:compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
     "build:preparePackageJsons": "node ./scripts/preparePackageJsons.js",
-    "build": "pnpm run build:peg && pnpm run build:compile && pnpm run build:preparePackageJsons",
+    "build": "pnpm run build:compile && pnpm run build:preparePackageJsons",
     "test": "jest",
     "cbuild": "pnpm run clean && pnpm run build",
     "watch": "tsc -w -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
@@ -51,5 +50,15 @@
     "release:push": "git push --follow-tags",
     "release:publish": "npm publish",
     "release": "pnpm run release:bump && pnpm run release:push && pnpm run release:publish"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.5.2",
+    "commit-and-tag-version": "^12.6.0",
+    "del-cli": "^7.0.0",
+    "jest": "^30.1.3",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.4.3",
+    "typescript": "^5.9.2"
   }
 }
