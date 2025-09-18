@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "uboness",
   "publishConfig": {
-    "@uboness:registry": "https://npm.pkg.github.com/"
+    "@uboness:registry": "https://registry.npmjs.org "
   },
   "repository": {
     "type": "git",
