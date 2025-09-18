@@ -39,13 +39,13 @@
     "test": "jest",
     "cbuild": "pnpm run clean && pnpm run build",
     "watch": "tsc -w -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
+    "release": "pnpm run release:bump && pnpm run release:postbump",
     "release:bump": "commit-and-tag-version",
     "release:postbump": "pnpm run release:push && pnpm run release:publish",
     "release:push": "git push --follow-tags",
-    "release:publish:npm": "npm publish --registry=https://registry.npmjs.org",
-    "release:publish:gh": "npm publish --registry=https://npm.pkg.github.com",
     "release:publish": "pnpm run release:publish:npm && pnpm run release:publish:gh",
-    "release": "pnpm run release:bump && pnpm run release:postbump"
+    "release:publish:npm": "npm publish --registry=https://registry.npmjs.org",
+    "release:publish:gh": "npm publish --registry=https://npm.pkg.github.com"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
