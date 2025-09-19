@@ -46,7 +46,6 @@ export namespace XJSON {
         date: Date;
     }
 
-
     export type Value = ValueMap[keyof ValueMap];
     export type Primitive = JSONPrimitive | Date | Value
     export type Object = { [key: string]: XJSON };
@@ -57,7 +56,7 @@ export namespace XJSON {
         export const isEmpty = <T extends Object = Object>(value: T): boolean => value === EMPTY;
     }
 
-    export const register = (descriptor: ValueDescriptor) => Registry.register(descriptor);
+    export const register = <T = any>(descriptor: ValueDescriptor<T>) => Registry.register<T>(descriptor);
     export const unregister = (tag: string) => Registry.unregister(tag);
 
     export const toJSON = (value?: XJSON): Optional<JSON> => {

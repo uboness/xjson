@@ -35,18 +35,18 @@ export class Duration {
 
 // Register Duration with XJSON before tests
 beforeAll(() => {
-    XJSON.register({
+    XJSON.register<Duration>({
         tag: 'duration',
-        is: (value: any): value is Duration => {
+        is: (value: any) => {
             return value instanceof Duration;
         },
-        toString: (value: Duration) => {
+        toString: (value) => {
             return value.toString();
         },
         fromString: (jsonValue: string) => {
             return Duration.parse(jsonValue);
         },
-        toHumanString: (value: Duration) => {
+        toHumanString: (value) => {
             return `${value.ms} milliseconds`;
         }
     });

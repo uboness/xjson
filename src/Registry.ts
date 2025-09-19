@@ -25,10 +25,10 @@ export const Registry = new class {
         return this.#tags;
     }
 
-    register(descriptor: XJSON.ValueDescriptor) {
+    register<T = any>(descriptor: XJSON.ValueDescriptor<T>) {
         this.#registry.set(descriptor.tag, descriptor);
         this.#descriptors =  Array.from(this.#registry.values());
-        this.#tags =  Array.from(this.#registry.keys());
+        this.#tags = Array.from(this.#registry.keys());
     }
 
     unregister(tag: string) {
