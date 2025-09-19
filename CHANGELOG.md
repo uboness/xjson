@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.8](https://github.com/uboness/xjson/compare/v0.0.7...v0.0.8) (2025-09-19)
+
+
+### Bug Fixes
+
+* cleaned up XJSON.test.ts and added clean & build & test before the actual release ([66aae64](https://github.com/uboness/xjson/commit/66aae64e3f80cd58f037853fb59e75aa7dd7b79f))
+
 ## [0.0.7](https://github.com/uboness/xjson/compare/v0.0.6...v0.0.7) (2025-09-19)
 
 ## [0.0.6](https://github.com/uboness/xjson/compare/v0.0.5...v0.0.6) (2025-09-18)
