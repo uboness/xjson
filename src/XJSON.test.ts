@@ -35,7 +35,7 @@ export class Duration {
 
 // Register Duration with XJSON before tests
 beforeAll(() => {
-    XJSON.register<Duration>({
+    XJSON.register({
         tag: 'duration',
         is: (value: any) => {
             return value instanceof Duration;
