@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.9](https://github.com/uboness/xjson/compare/v0.0.8...v0.0.9) (2025-09-29)
+
+
+### Features
+
+* expose the registered descriptors ([ab1c976](https://github.com/uboness/xjson/commit/ab1c97638a3719c5856e65373d7b3632435f9647))
+
 ## [0.0.8](https://github.com/uboness/xjson/compare/v0.0.7...v0.0.8) (2025-09-19)
 
 
