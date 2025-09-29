@@ -58,6 +58,7 @@ export namespace XJSON {
 
     export const register = <T = any>(descriptor: ValueDescriptor<T>) => Registry.register<T>(descriptor);
     export const unregister = (tag: string) => Registry.unregister(tag);
+    export const descriptors = () => Registry.descriptors
 
     export const toJSON = (value?: XJSON): Optional<JSON> => {
         if (value === undefined) {
