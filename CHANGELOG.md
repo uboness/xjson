@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://github.com/uboness/xjson/compare/v0.0.9...v0.1.0) (2025-09-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* Changed XJSON such that augmentation will be simpler for consumers
+
+### Features
+
+* Changed XJSON such that augmentation will be simpler for consumers ([f0f4c30](https://github.com/uboness/xjson/commit/f0f4c304c95afd45a4a65aa5164ccea465111982))
+
 ## [0.0.9](https://github.com/uboness/xjson/compare/v0.0.8...v0.0.9) (2025-09-29)
 
 
